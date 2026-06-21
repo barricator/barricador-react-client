@@ -1,6 +1,15 @@
 # barricator-react-client
 
+[![npm](https://img.shields.io/npm/v/@barricator/react-client?label=npm)](https://www.npmjs.com/package/@barricator/react-client)
+
 Client-side **React SDK** for Barricator. TypeScript, React 18+.
+
+## Install
+
+```bash
+npm install @barricator/react-client
+# peer dependency: react >= 18
+```
 
 ## Security model
 
