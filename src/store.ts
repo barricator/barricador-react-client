@@ -43,7 +43,7 @@ export class BarricatorStore {
     if (!options.user?.key) throw new Error("user.key is required");
     this.clientKey = options.clientKey;
     this.user = options.user;
-    this.baseUrl = (options.baseUrl ?? "https://app.barricator.io").replace(/\/$/, "");
+    this.baseUrl = (options.baseUrl ?? "https://app.barricator.com").replace(/\/$/, "");
     this.streaming = options.streaming ?? true;
     this.telemetry = options.telemetry ?? true;
     this.flushIntervalMs = options.flushIntervalMs ?? 30000;

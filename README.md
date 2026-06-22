@@ -33,7 +33,7 @@ function App() {
     <BarricatorProvider
       clientKey="sdk-cli-..."
       user={{ key: "user-123", email: "user@enterprise.com", custom: { plan: "pro" } }}
-      baseUrl="https://app.barricator.io"
+      baseUrl="https://app.barricator.com"
     >
       <BarricatorErrorBoundary fallback={<Classic />}>
         <Home />
