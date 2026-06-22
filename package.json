@@ -1,6 +1,6 @@
 {
   "name": "@barricator/react-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Barricator client-side React SDK (pre-evaluated context model, SSE sync, telemetry)",
   "type": "module",
   "main": "dist/index.js",
