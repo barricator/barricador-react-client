@@ -1,4 +1,4 @@
-/** Public types for the Barricator React client SDK. */
+/** Public types for the Barricador React client SDK. */
 
 export type FlagValue = boolean | string | number | Record<string, unknown> | unknown[] | null;
 
@@ -12,7 +12,7 @@ export interface UserContext {
   custom?: Record<string, unknown>;
 }
 
-export interface BarricatorClientOptions {
+export interface BarricadorClientOptions {
   clientKey: string;
   user: UserContext;
   baseUrl?: string;

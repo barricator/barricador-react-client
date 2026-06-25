@@ -1,6 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from "react";
 
-export interface BarricatorErrorBoundaryProps {
+export interface BarricadorErrorBoundaryProps {
   /** Rendered if a descendant throws during render. */
   fallback: ReactNode;
   onError?: (error: Error, info: ErrorInfo) => void;
@@ -16,8 +16,8 @@ interface State {
  * provided fallback instead of crashing the tree. Combined with `useFeatureFlag`'s fallback values
  * (returned on any network/eval failure), the app always has a safe default to render.
  */
-export class BarricatorErrorBoundary extends Component<BarricatorErrorBoundaryProps, State> {
-  constructor(props: BarricatorErrorBoundaryProps) {
+export class BarricadorErrorBoundary extends Component<BarricadorErrorBoundaryProps, State> {
+  constructor(props: BarricadorErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }

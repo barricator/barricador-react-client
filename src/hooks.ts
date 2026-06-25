@@ -1,11 +1,11 @@
 import { useCallback, useContext, useSyncExternalStore } from "react";
-import { BarricatorContext } from "./context";
+import { BarricadorContext } from "./context";
 import type { ConnectionStatus, FlagValue } from "./types";
 
 function useStore() {
-  const store = useContext(BarricatorContext);
+  const store = useContext(BarricadorContext);
   if (!store) {
-    throw new Error("useFeatureFlag must be used within a <BarricatorProvider>");
+    throw new Error("useFeatureFlag must be used within a <BarricadorProvider>");
   }
   return store;
 }
@@ -35,7 +35,7 @@ export function useFeatureFlagEnabled(key: string, fallback = false): boolean {
 }
 
 /** Observe the SDK connection status (initializing / ready / offline). */
-export function useBarricatorStatus(): ConnectionStatus {
+export function useBarricadorStatus(): ConnectionStatus {
   const store = useStore();
   const subscribe = useCallback((cb: () => void) => store.subscribeStatus(cb), [store]);
   const getSnapshot = useCallback(() => store.getStatus(), [store]);

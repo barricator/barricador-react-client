@@ -1,13 +1,13 @@
-# barricator-react-client
+# barricador-react-client
 
-[![npm](https://img.shields.io/npm/v/@barricator/react-client?label=npm)](https://www.npmjs.com/package/@barricator/react-client)
+[![npm](https://img.shields.io/npm/v/@barricador/react-client?label=npm)](https://www.npmjs.com/package/@barricador/react-client)
 
-Client-side **React SDK** for Barricator. TypeScript, React 18+.
+Client-side **React SDK** for Barricador. TypeScript, React 18+.
 
 ## Install
 
 ```bash
-npm install @barricator/react-client
+npm install @barricador/react-client
 # peer dependency: react >= 18
 ```
 
@@ -22,23 +22,23 @@ prompting a re-fetch. Telemetry is buffered and flushed asynchronously.
 
 ```tsx
 import {
-  BarricatorProvider,
-  BarricatorErrorBoundary,
+  BarricadorProvider,
+  BarricadorErrorBoundary,
   useFeatureFlag,
   useFeatureFlagEnabled,
-} from "@barricator/react-client";
+} from "@barricador/react-client";
 
 function App() {
   return (
-    <BarricatorProvider
+    <BarricadorProvider
       clientKey="sdk-cli-..."
       user={{ key: "user-123", email: "user@enterprise.com", custom: { plan: "pro" } }}
-      baseUrl="https://app.barricator.com"
+      baseUrl="https://app.barricador.com"
     >
-      <BarricatorErrorBoundary fallback={<Classic />}>
+      <BarricadorErrorBoundary fallback={<Classic />}>
         <Home />
-      </BarricatorErrorBoundary>
-    </BarricatorProvider>
+      </BarricadorErrorBoundary>
+    </BarricadorProvider>
   );
 }
 
@@ -57,8 +57,8 @@ re-renders only when *its* flag value changes — not on every flag update.
 ## Resilience
 
 Network/eval failures never throw: the SDK keeps the last values and unknown flags return the
-provided fallback. `BarricatorErrorBoundary` guarantees the UI still renders a safe default if
-flag-driven rendering throws. `useBarricatorStatus()` exposes `initializing | ready | offline`.
+provided fallback. `BarricadorErrorBoundary` guarantees the UI still renders a safe default if
+flag-driven rendering throws. `useBarricadorStatus()` exposes `initializing | ready | offline`.
 
 ## Build
 

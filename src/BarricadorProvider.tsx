@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { BarricatorContext } from "./context";
-import { BarricatorStore } from "./store";
+import { BarricadorContext } from "./context";
+import { BarricadorStore } from "./store";
 import type { UserContext } from "./types";
 
-export interface BarricatorProviderProps {
+export interface BarricadorProviderProps {
   clientKey: string;
   user: UserContext;
   baseUrl?: string;
@@ -16,12 +16,12 @@ export interface BarricatorProviderProps {
 }
 
 /**
- * Wraps the app, owns the {@link BarricatorStore} lifecycle, and re-evaluates when the user identity
+ * Wraps the app, owns the {@link BarricadorStore} lifecycle, and re-evaluates when the user identity
  * changes. Establishes the SSE connection and telemetry flushing. Never blocks rendering: children
  * render immediately and flags resolve to their fallbacks until the first eval lands (unless a
  * `fallback` node is provided to gate on readiness).
  */
-export function BarricatorProvider({
+export function BarricadorProvider({
   clientKey,
   user,
   baseUrl,
@@ -30,10 +30,10 @@ export function BarricatorProvider({
   flushIntervalMs,
   fallback,
   children,
-}: BarricatorProviderProps) {
-  const storeRef = useRef<BarricatorStore | null>(null);
+}: BarricadorProviderProps) {
+  const storeRef = useRef<BarricadorStore | null>(null);
   if (storeRef.current === null) {
-    storeRef.current = new BarricatorStore({
+    storeRef.current = new BarricadorStore({
       clientKey,
       user,
       baseUrl,
@@ -65,6 +65,6 @@ export function BarricatorProvider({
   }
 
   return (
-    <BarricatorContext.Provider value={storeRef.current}>{children}</BarricatorContext.Provider>
+    <BarricadorContext.Provider value={storeRef.current}>{children}</BarricadorContext.Provider>
   );
 }

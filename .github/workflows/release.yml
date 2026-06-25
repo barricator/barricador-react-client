@@ -2,7 +2,7 @@ name: Release
 
 # Publishes the React SDK to npm when a version tag is pushed (e.g. v1.0.0).
 # Publishes with provenance. Set the NPM_TOKEN secret to an npm automation token for the
-# @barricator org (npmjs.com → Access Tokens → Granular/Automation).
+# @barricador org (npmjs.com → Access Tokens → Granular/Automation).
 on:
   push:
     tags: ['v*']

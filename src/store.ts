@@ -1,5 +1,5 @@
 import type {
-  BarricatorClientOptions,
+  BarricadorClientOptions,
   ConnectionStatus,
   EvalResponse,
   FlagValue,
@@ -18,7 +18,7 @@ type Listener = () => void;
  * asynchronously. Reads are O(1) and never throw: on any failure the SDK keeps the last values, and
  * unknown flags fall back to the caller-provided default in {@link getValue}.
  */
-export class BarricatorStore {
+export class BarricadorStore {
   private readonly baseUrl: string;
   private readonly clientKey: string;
   private user: UserContext;
@@ -38,12 +38,12 @@ export class BarricatorStore {
   private flushTimer: ReturnType<typeof setInterval> | null = null;
   private closed = false;
 
-  constructor(options: BarricatorClientOptions) {
+  constructor(options: BarricadorClientOptions) {
     if (!options.clientKey) throw new Error("clientKey is required");
     if (!options.user?.key) throw new Error("user.key is required");
     this.clientKey = options.clientKey;
     this.user = options.user;
-    this.baseUrl = (options.baseUrl ?? "https://app.barricator.com").replace(/\/$/, "");
+    this.baseUrl = (options.baseUrl ?? "https://app.barricador.com").replace(/\/$/, "");
     this.streaming = options.streaming ?? true;
     this.telemetry = options.telemetry ?? true;
     this.flushIntervalMs = options.flushIntervalMs ?? 30000;

@@ -1,11 +1,11 @@
-export { BarricatorProvider } from "./BarricatorProvider";
-export type { BarricatorProviderProps } from "./BarricatorProvider";
-export { BarricatorErrorBoundary } from "./BarricatorErrorBoundary";
-export type { BarricatorErrorBoundaryProps } from "./BarricatorErrorBoundary";
-export { useFeatureFlag, useFeatureFlagEnabled, useBarricatorStatus } from "./hooks";
-export { BarricatorStore } from "./store";
+export { BarricadorProvider } from "./BarricadorProvider";
+export type { BarricadorProviderProps } from "./BarricadorProvider";
+export { BarricadorErrorBoundary } from "./BarricadorErrorBoundary";
+export type { BarricadorErrorBoundaryProps } from "./BarricadorErrorBoundary";
+export { useFeatureFlag, useFeatureFlagEnabled, useBarricadorStatus } from "./hooks";
+export { BarricadorStore } from "./store";
 export type {
-  BarricatorClientOptions,
+  BarricadorClientOptions,
   ConnectionStatus,
   EvalResponse,
   FlagValue,

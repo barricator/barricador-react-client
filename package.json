@@ -1,7 +1,7 @@
 {
-  "name": "@barricator/react-client",
+  "name": "@barricador/react-client",
   "version": "0.1.1",
-  "description": "Barricator client-side React SDK (pre-evaluated context model, SSE sync, telemetry)",
+  "description": "Barricador client-side React SDK (pre-evaluated context model, SSE sync, telemetry)",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -14,14 +14,14 @@
   },
   "sideEffects": false,
   "files": ["dist"],
-  "keywords": ["feature-flags", "barricator", "react", "sdk", "rollout", "ab-testing"],
-  "homepage": "https://github.com/barricator/barricator-react-client",
+  "keywords": ["feature-flags", "barricador", "react", "sdk", "rollout", "ab-testing"],
+  "homepage": "https://github.com/barricador/barricador-react-client",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/barricator/barricator-react-client.git"
+    "url": "git+https://github.com/barricador/barricador-react-client.git"
   },
   "bugs": {
-    "url": "https://github.com/barricator/barricator-react-client/issues"
+    "url": "https://github.com/barricador/barricador-react-client/issues"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
